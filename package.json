@@ -8,7 +8,9 @@
     "package.json",
     "LICENSE"
   ],
-  "bin": "./bin/ts-cli-template",
+  "bin": {
+    "ts-cli-template": "./bin/ts-cli-template"
+  },
   "scripts": {
     "build": "tsc -p tsconfig.json",
     "watch": "yarn build --watch",
