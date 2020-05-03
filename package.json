@@ -1,0 +1,25 @@
+{
+  "name": "ts-cli-template",
+  "version": "1.0.0",
+  "license": "MIT",
+  "files": [
+    "bin",
+    "lib",
+    "package.json",
+    "LICENSE"
+  ],
+  "bin": "./bin/ts-cli-template",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "watch": "yarn build --watch",
+    "prepublish": "yarn build",
+    "sample": "./bin/ts-cli-template --message 'test message' --flag"
+  },
+  "devDependencies": {
+    "@types/node": "^13.13.4",
+    "typescript": "^3.8.3"
+  },
+  "dependencies": {
+    "commander": "^5.1.0"
+  }
+}
