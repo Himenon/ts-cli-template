@@ -1,2 +1,5 @@
 #!/usr/bin/env node
-require("../lib");
+const pkg = require("../package.json");
+const { main } = require("../lib");
+
+main(pkg.version);

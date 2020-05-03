@@ -5,9 +5,9 @@ export interface CLIArguments {
   flag: boolean;
 }
 
-const getArguments = (): CLIArguments => {
+const getArguments = (version: string): CLIArguments => {
   commander
-    .version("1.0.0")
+    .version(version)
     .option("--message [message]", "input text")
     .option("--flag", "boolean flag")
     .parse(process.argv);
@@ -17,9 +17,7 @@ const getArguments = (): CLIArguments => {
   }
 }
 
-const main = () => {
-  const params = getArguments();
+export const main = (version: string) => {
+  const params = getArguments(version);
   console.log(params);
 }
-
-main();
